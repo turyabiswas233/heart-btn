@@ -1,0 +1,83 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0d0124;
+}
+
+div.contain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+div.contain div.circle {
+    background-image: linear-gradient(-60deg, #ff2bed, #e4baba);
+    box-shadow: inset 0 0 10px #0002;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 50%;
+    padding: 1rem;
+    z-index: 1;
+}
+
+div.contain div.circle div.btn {
+    background-image: linear-gradient(-60deg, #faefaf, #e4baba);
+    box-shadow: 0 0 10px #0005;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: -10;
+}
+
+div.btn::before {
+    content: "";
+    position: absolute;
+    top: 17%;
+    left: 17%;
+    /* background-image: linear-gradient(45deg, #f3e8aa, #aeaeae); */
+    box-shadow: inset 0 0 15px #f0fa, inset 0px 5px 5px #0fa;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 50%;
+    padding: 2.5rem;
+    animation: rot_disk 1250ms linear infinite;
+    z-index: -1;
+}
+
+i.fas {
+    color: #ff0000;
+    font-size: 2rem;
+    animation: icon 750ms infinite;
+}
+
+
+
+@keyframes rot_disk {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes icon {
+    from {
+        transform: scale(1);
+    }
+
+    80% {
+        transform: scale(1.15);
+    }
+}
